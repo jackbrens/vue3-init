@@ -47,6 +47,8 @@ module.exports = {
   // "warn" 或 1 - 开启规则，使用警告级别的错误：warn (不会导致程序退出)
   // "error" 或 2 - 开启规则，使用错误级别的错误：error (当被触发的时候，程序会退出)
   rules: {
+    // 关闭 ts 中一些提示
+    '@typescript-eslint/ban-ts-comment': 'off',
     // 出现 console 警告
     'no-console': 'warn',
     // 出现 debugger 警告
@@ -90,7 +92,7 @@ module.exports = {
     // 强制使用一致的缩进
     indent: 'off',
     // 必须使用全等 '===' 符号
-    eqeqeq: 'error',
+    eqeqeq: 'warn',
     // 静止出现分号
     semi: ['warn', 'never'],
   },
