@@ -2,10 +2,11 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import path from 'path'
 import viteBuildInfo from './build/info'
+import progress from 'vite-plugin-progress'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), viteBuildInfo()],
+  plugins: [vue(), progress(), viteBuildInfo()],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
