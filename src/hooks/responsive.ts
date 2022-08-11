@@ -11,10 +11,10 @@ const responsive: Responsive = reactive({
     return this.width <= 768
   },
   tablet() {
-    return this.width <= 900
+    return this.width > 768 && this.width <= 900
   },
   desktop() {
-    return this.width <= 1200
+    return this.width > 900 && this.width <= 1200
   },
   wide() {
     return this.width >= 1200
